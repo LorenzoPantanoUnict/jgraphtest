@@ -224,6 +224,7 @@ public class GraphTest {
                 connInspector = new ConnectivityInspector<>(graphCopy);
                 removed++;
             }
+            
             if(i==0 && verbose){
                 GraphInportExport.exportDotGraph(graphCopy, "Graphdisconnected.dot");
 

@@ -107,26 +107,21 @@ public class GraphInportExport {
 
         DOTExporter<String, DefaultEdge> exporter = new DOTExporter<>(v -> v);
 
-        // === 1. CONFIGURAZIONE GLOBALE GRAFO (La Soluzione) ===
+        
         exporter.setGraphAttributeProvider(() -> {
             Map<String, Attribute> map = new LinkedHashMap<>();
             
-            // "splines=true": Trasforma le linee rette in curve eleganti
             map.put("splines", DefaultAttribute.createAttribute("true")); 
             
-            // "overlap=false": Cerca di non sovrapporre nodi ed etichette
             map.put("overlap", DefaultAttribute.createAttribute("false"));
             
-            // "layout=neato": Suggerisce di usare l'algoritmo neato (migliore per questo)
             map.put("layout", DefaultAttribute.createAttribute("neato"));
             
-            // Aumenta la distanza minima tra i nodi (opzionale, default è basso)
             map.put("sep", DefaultAttribute.createAttribute("0.4"));
             
             return map;
         });
 
-        // === 2. CONFIGURAZIONE ATTRIBUTI NODI (La tua logica precedente) ===
         exporter.setVertexAttributeProvider(v -> {
             Map<String, Attribute> map = new LinkedHashMap<>();
             map.put("label", DefaultAttribute.createAttribute(v));

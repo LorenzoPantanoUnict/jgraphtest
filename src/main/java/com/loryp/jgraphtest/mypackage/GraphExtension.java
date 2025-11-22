@@ -385,44 +385,29 @@ public class GraphExtension {
         return list;
     }
 
-    /**
-     * Calcola la distribuzione del grado P(k) per un dato grafo.
-     * La distribuzione del grado descrive la probabilità che un nodo scelto casualmente
-     * abbia un grado k.
-     *
-     * @param graph Il grafo da analizzare.
-     * @param <V>   Il tipo dei vertici.
-     * @param <E>   Il tipo degli archi.
-     * @return      Una Map<Integer, Double> dove la chiave è il grado (k) e
-     * il valore è la probabilità P(k), ovvero la frazione di nodi
-     * con quel grado (Nk / N).
-     */
+  
     public static <V, E> Map<Integer, Double> getDegreeDistribution(Graph<V, E> graph) {
-        // Mappa per contare i nodi per ogni grado (Nk)
+        
         Map<Integer, Integer> degreeCounts = new HashMap<>();
         
         int totalNodes = graph.vertexSet().size();
 
-        // Se il grafo è vuoto, restituisce una mappa vuota
+        
         if (totalNodes == 0) {
-            return new TreeMap<>(); // TreeMap per restituire i risultati ordinati per grado
+            return new TreeMap<>(); 
         }
-
-        // 1. Itera su tutti i vertici e conta le occorrenze di ogni grado
+    
         for (V vertex : graph.vertexSet()) {
             int degree = graph.degreeOf(vertex);
             degreeCounts.put(degree, degreeCounts.getOrDefault(degree, 0) + 1);
         }
 
-        // Mappa per memorizzare la distribuzione di probabilità P(k)
         Map<Integer, Double> degreeDistribution = new TreeMap<>(); // TreeMap per l'ordinamento
 
-        // 2. Calcola la probabilità P(k) = Nk / N per ogni grado k
         for (Map.Entry<Integer, Integer> entry : degreeCounts.entrySet()) {
             int degree = entry.getKey();
-            int count = entry.getValue(); // Numero di nodi con grado k (Nk)
+            int count = entry.getValue(); 
             
-            // Calcola la frazione/probabilità
             double probability = (double) count / totalNodes;
             
             degreeDistribution.put(degree, probability);
