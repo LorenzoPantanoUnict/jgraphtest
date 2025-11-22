@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Confronto Rimozione Casuale vs Mirata</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id='target' ></div>
+        <script>
+        var target_target = document.getElementById('target');
+        var layout = {
+    title: 'Confronto Rimozione Casuale vs Mirata',
+    height: 600,
+    width: 1200,
+    xaxis: {
+    title: 'Istanze Grafo',
+    },
+
+    yaxis: {
+    title: 'Nodi Rimossi',
+    },
+
+};
+
+var trace0 =
+{
+x: ["Grafo 1","Grafo 2","Grafo 3","Grafo 4","Grafo 5","Grafo 6","Grafo 7","Grafo 8","Grafo 9","Grafo 10"],
+y: [14.75, 11.9, 14.35, 15.9, 16.9, 15.8, 17.65, 16.1, 14.5, 15.65],
+marker: {
+    size: 6.0,
+    color: 'blue',
+},
+orientation: 'v',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: 'Rimozione Casuale',
+};
+var trace1 =
+{
+x: ["Grafo 1","Grafo 2","Grafo 3","Grafo 4","Grafo 5","Grafo 6","Grafo 7","Grafo 8","Grafo 9","Grafo 10"],
+y: [4.0, 2.0, 2.0, 3.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0],
+marker: {
+    size: 6.0,
+    color: 'crimson',
+},
+orientation: 'v',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: 'Rimozione Mirata',
+};
+
+        var data = [ trace0, trace1];
+Plotly.newPlot(target_target, data, layout);            </script>
+
+</body>
+</html>

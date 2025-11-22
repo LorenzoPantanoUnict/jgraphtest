@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Distribuzione Betweenness Centrality</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id='target' ></div>
+        <script>
+        var target_target = document.getElementById('target');
+        var layout = {
+    title: 'Distribuzione Betweenness Centrality',
+    height: 600,
+    width: 900,
+    xaxis: {
+    title: 'ID Vertice',
+    },
+
+    yaxis: {
+    title: 'Betweenness Centrality',
+    },
+
+};
+
+var trace0 =
+{
+x: ["v0","v23","v21","v2","v16","v8","v1","v12","v14","v5","v6","v19","v29","v17","v3","v30","v31","v32","v20","v18","v4","v9","v7","v10","v11","v13","v15","v22","v24","v25","v26","v27","v28","v33"],
+y: [231.07142857142864, 160.5515873015873, 76.69047619047622, 75.85079365079365, 73.00952380952381, 29.529365079365085, 28.478571428571428, 24.21587301587301, 17.146825396825403, 15.833333333333334, 15.833333333333332, 11.792063492063493, 9.299999999999999, 7.60952380952381, 6.288095238095237, 2.0277777777777777, 1.5428571428571427, 1.1666666666666665, 0.9476190476190476, 0.44761904761904764, 0.3333333333333333, 0.3333333333333333, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+orientation: 'v',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_target, data, layout);        
+
+    </script>
+
+</body>
+</html>

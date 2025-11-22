@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Robustezza dei Grafi (Resistenza alla rimozione nodi)</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id='target' ></div>
+        <script>
+        var target_target = document.getElementById('target');
+        var layout = {
+    title: 'Robustezza dei Grafi (Resistenza alla rimozione nodi)',
+    height: 600,
+    width: 800,
+    xaxis: {
+    title: 'Nodi rimossi (Media)',
+    autorange: 'false',
+    range: ["14","16.5"],
+    },
+
+    yaxis: {
+    title: 'Istanza',
+    },
+
+};
+
+var trace0 =
+{
+x: [14.79, 14.35, 14.91, 15.07, 16.95, 14.57, 15.56, 15.73, 15.96, 15.85],
+y: ["Grafo 1","Grafo 2","Grafo 3","Grafo 4","Grafo 5","Grafo 6","Grafo 7","Grafo 8","Grafo 9","Grafo 10"],
+marker: {
+    size: 6.0,
+    color: ["#FF0000","#FF4500","#FF8C00","#FFA500","#FFD700","#FFFF00","#ADFF2F","#7FFF00","#32CD32","#008000"],
+    cmax: 0.0,
+    cmin: 0.0,
+},
+orientation: 'h',
+opacity: '0.8',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_target, data, layout);            </script>
+
+</body>
+</html>

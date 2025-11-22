@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisi Small-World</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id='target' ></div>
+        <script>
+        var target_target = document.getElementById('target');
+        var layout = {
+    title: 'Analisi Small-World',
+    height: 600,
+    width: 1200,
+    xaxis: {
+    title: 'Istanze Grafo',
+    },
+
+    yaxis: {
+    title: 'score',
+    },
+
+};
+
+var trace0 =
+{
+x: ["Grafo 1","Grafo 2","Grafo 3","Grafo 4","Grafo 5","Grafo 6","Grafo 7","Grafo 8","Grafo 9","Grafo 10"],
+y: [10.0, 13.0, 11.0, 10.0, 9.0, 9.0, 9.0, 14.0, 11.0, 9.0],
+marker: {
+    size: 6.0,
+    color: 'blue',
+},
+orientation: 'v',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: 'Diametro',
+};
+var trace1 =
+{
+x: ["Grafo 1","Grafo 2","Grafo 3","Grafo 4","Grafo 5","Grafo 6","Grafo 7","Grafo 8","Grafo 9","Grafo 10"],
+y: [4.702535559678417, 5.945990517419089, 4.564831993403422, 4.644403215831788, 4.1397649969078545, 4.357039785611214, 4.534735106163677, 5.846629560915275, 5.074005359719646, 4.012780869923727],
+marker: {
+    size: 6.0,
+    color: 'darkblue',
+},
+orientation: 'v',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: 'Distanza Media',
+};
+
+        var data = [ trace0, trace1];
+Plotly.newPlot(target_target, data, layout);            </script>
+
+</body>
+</html>
