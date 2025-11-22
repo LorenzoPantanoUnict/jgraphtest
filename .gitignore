@@ -1,0 +1,35 @@
+# --- Maven (Cartelle di build) ---
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# --- Java Class Files (Ridondante se ignori target, ma utile) ---
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.ear
+
+# --- VS Code (Impostazioni locali dell'editor) ---
+.vscode/
+*.code-workspace
+
+# --- File di Sistema (Spazzatura generata da Windows/Mac) ---
+.DS_Store
+Thumbs.db
+
+# --- Cartelle specifiche del tuo progetto (Output dei test) ---
+testoutput/
+
+# --- Output generati dentro Resources (Opzionale) ---
+# Se il tuo programma scrive dentro queste cartelle mentre gira,
+# scommenta le righe qui sotto per non committare i risultati dei test:
+# src/main/resources/TestsLog/*
+# src/main/resources/dotexported/*
+# src/main/resources/jsonexported/*
+# src/main/resources/png/*
+# src/main/resources/scripts/*
+# !src/main/resources/TestsLog/.gitkeep
